@@ -80,7 +80,26 @@ some more fixes:
 still something to be fixed for EntryForm, for new entries only:
 
 - the record must be inizialized with the car currenty selected in the dashboard.
-- "odometer" field must be inizialized with last odometer data, ignore record type, it must be the last odometer available for that car. 
+- "odometer" field must be inizialized with last odometer data, ignore record type, it must be the last odometer available for that car.
+
+---
+
+now let's implement all actions for the top nav bar hambuger menu:
+
+- The "dark mode" toggle should change the theme settings from light mode to dark mode.
+- "Logout" simply logs out the user from the application
+
+> [!NOTE]
+> Did not work...
+
+sorry to say, but neither the dark mode toggle nor the logout buttons appear to be working. They simply do nothing on tap/click.
+
+---
+
+still not working, clicking the "dark mode" toggle just changes text from "dark mode" to "light mode" and vice-versa but the app theme stays unchanged
+
+> [!NOTE]
+> Still not working and 2 more **precious** credits wasted...
 
 ## List of prompts
 
