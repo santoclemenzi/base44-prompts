@@ -65,9 +65,8 @@ some more fixes:
 > [!NOTE]
 > Error with the new date field, option "fix by AI" available, used it and it worked.
 
----
-
-Changed data security from app settings in "Security" with rule "only data inserted by user"
+> [!IMPORTANT]
+> Changed data security from app settings in "Security" with rule "only data inserted by user"
 
 ---
 
