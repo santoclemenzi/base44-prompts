@@ -1,5 +1,7 @@
 # CarBro
 
+App published! Click [here](https://app--car-bro-59debb07.base44.app) to access.
+
 ## List of prompts
 
 A web app as a PWA, to keep track of fuel fill-ups and services on my cars. The app should manage the following data:
@@ -110,6 +112,51 @@ let's then introduce some validation to the EntryForm page: odometer can't be lo
 ---
 
 Update EntryForm page to set the car selector with the selectedCarId from session storage when the page is loaded
+
+---
+
+disable validation control on odometer field if you're adding a general expense, for "expense" record type odometer is not a mandatory field
+
+> [!NOTE]
+> This generated an error on save if odometer field is empty due to data structure expecting a value, option "fix by AI" available, used it and it worked.
+
+---
+
+disable link on every entry within the "recent activities" module: these entries should not be clickable, they're just a view of records. Only "Show all" must be clickable.
+
+---
+
+Car selector shows a truncated car brand + name for some mobile devices. Change it so the string car brand + name is larger.
+
+---
+
+for car selector keep the year within the same line, just leave more space for brand + name
+
+> [!NOTE]
+> These latest prompt didn't really work as expected, issue is still there...
+
+---
+
+For "All activities" page: Let's change the text which counts all records based on selected filter. As an example, now it shows "Showing 6 of 14 activities for Ford Puma Hybrid", meaning that is counting filtered records out of ALL records in the LogEntry table for this user, even if car "Ford Puma Hybrid" is selected. Let's change it so it counts total records only for the selected car and the total of the table for the user if "All Cars" is selected.
+
+---
+
+Now, let's change thigs a bit adding a new page. Let's add a "Settings" page, this page should have all user settings: the toggle switch for dark/light mode, and the "import/export" feature. This feature should have:
+- An "export template" button, to export a xls template file with the correct data structure to import external cars and log entries data
+- An "import data" button, which selecting a xls file from user device (file must be in the same format and data structure of the template provided above) will save data for the user
+- An "export data" button which exports to the user device all data in xls format, with same data structure of the template
+
+This page should be reached from an item within the hamburger menu in the top nav bar. Delete the "Dark mode" item in the menu and place the new "Settings" one to go to the settings page.
+
+---
+
+That's ok, let's fix some issues:
+- All button labels for the import/export feature have the text in another line, different from the icon, keep icon and text in the same line.
+- Swap icons, the export one should replace the import one and vice-versa.
+- The "export data" button exports a csv file with all data in a single line, showing a "\n" for new lines, this is generating a corrupted csv file. Generate a proper file with all rows correctly placed in one line per row.
+- The import button is not executing any action, fix it so it will ask the user to select the file from the device file system and then proceed with importing data if the file respects the data structure.
+
+---
 
 ## Nice to have
 
