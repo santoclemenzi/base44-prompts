@@ -158,6 +158,11 @@ That's ok, let's fix some issues:
 
 ---
 
-## Nice to have
+> [!NOTE]
+> Well, it fixed the icons and the export file format issue, but layout is still weird. I looked at the code and suggested what to do exactly. The following change is definitely something you can't ask if you know nothing about HTML/CSS... the claim that "no coding experience is required" starts to lose meaning...
 
-- [ ] Import/export feature: export data in xls format which can also be used as "import template". Import xls file.
+Always on "Settings" page, in the import/export module: change className for GlassButton from w-full to flex items-center gap-2
+
+## TODO
+
+- [ ] Fix import feature, not even opening file selection dialog...
