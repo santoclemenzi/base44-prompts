@@ -166,3 +166,4 @@ Always on "Settings" page, in the import/export module: change className for Gla
 ## TODO
 
 - [ ] Fix import feature, not even opening file selection dialog...
+- [ ] Add button red "wipe all data" to completely delete user data. Clicking on the button should ask for confirmation with a popup.
