@@ -99,8 +99,18 @@ sorry to say, but neither the dark mode toggle nor the logout buttons appear to 
 still not working, clicking the "dark mode" toggle just changes text from "dark mode" to "light mode" and vice-versa but the app theme stays unchanged
 
 > [!NOTE]
-> Still not working and 2 more **precious** credits wasted...
+> Still not working and 2 more **precious** credits wasted... so I reverted back the app 2 step
 
-## List of prompts
+---
+
+when clicking on "add" button from the main dashboard save the selected card and pass it to both the AddEntry and EntryForm pages to set the car selector also on EntryForm page with the prevously selected car.
+
+let's then introduce some validation to the EntryForm page: odometer can't be lower than the last odometer found for that car. Validate the field on save and throw an alert message if the odometer is lower than the last value.
+
+---
+
+Update EntryForm page to set the car selector with the selectedCarId from session storage when the page is loaded
+
+## Nice to have
 
 - [ ] Import/export feature: export data in xls format which can also be used as "import template". Import xls file.
