@@ -1,6 +1,6 @@
 # CarBro
 
-Got a decent MVP after 32 (out of my monthly 35) prompts, for a complete list of prompts see below. App published and usable [here](https://app--car-bro-59debb07.base44.app).
+Got a decent MVP after 32 (out of my monthly free 35) prompts, for a complete list of prompts see below. App published and usable [here](https://app--car-bro-59debb07.base44.app).
 
 ## List of prompts
 
@@ -204,7 +204,7 @@ Import still failing with code 403 and same message I can see from "developer to
 { "error_type": "HTTPException", "message": "You don't have permission to create some of these entities.", "detail": "You don't have permission to create some of these entities.", "traceback": "" }
 
 > [!NOTE]
-> It finally worked. But it just added the feature to save record one by one instead of a bulk save, which actually still gives 403 permission error but at least is managed and skipped. I'd remove the first attempt to bulk save but since it's wokring, I'm leaving as it is, let's save a prompt (which I'm running out quite fast...)
+> It finally worked. But it just added the feature to save record one by one instead of a bulk save, which actually still gives 403 permission error but at least is catched and skipped. I'd remove the first attempt to bulk save but since it's wokring, I'm leaving as it is, let's save a prompt (which I'm running out quite fast...)
 
 ---
 
