@@ -1,6 +1,6 @@
 # CarBro
 
-App published! Click [here](https://app--car-bro-59debb07.base44.app) to access.
+Got a decent MVP after 32 (out of my monthly 35) prompts, for a complete list of prompts see below. App published and usable [here](https://app--car-bro-59debb07.base44.app).
 
 ## List of prompts
 
