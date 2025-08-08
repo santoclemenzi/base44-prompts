@@ -203,8 +203,22 @@ Import still failing with code 403 and same message I can see from "developer to
 
 { "error_type": "HTTPException", "message": "You don't have permission to create some of these entities.", "detail": "You don't have permission to create some of these entities.", "traceback": "" }
 
+> [!NOTE]
+> It finally worked. But it just added the feature to save record one by one instead of a bulk save, which actually still gives 403 permission error but at least is managed and skipped. I'd remove the first attempt to bulk save but since it's wokring, I'm leaving as it is, let's save a prompt (which I'm running out quite fast...)
+
+---
+
+Let's add final touches to the settings page:
+
+- Add new "Tools" section, with just one button. Button should have a calculator icon with label "Recalculate fuel efficiency". This is useful if you imported a lot of new data: fuel efficiency value will be missing for all imported records. Write a small description of the feature specifying which is advisable after data import, but will do no harm if executed at any time. Implement this re-calculation function.
+- Add new "danger zone" section with a red button with trash icon and label "Wipe all data" to completely delete user data (cars + log entries). Clicking on the button should ask for confirmation with a popup before proceeding, the popup message must say that data will be permanently deleted and can't be restored. After the confirmation, the app must delete all log entries and car data for the user. 
+
+> [!NOTE]
+> The recalculation tool immediately gave an error during my manual testing. It offered to fix it using AI, give it a go and fixed it but counted as another prompt...
+
 ## TODO
 
 - [X] Fix import feature, not even opening file selection dialog...
-- [ ] Add new "danger zone" to settings page with a red button "wipe all data" to completely delete user data (cars+log entries). Clicking on the button should ask for confirmation with a popup before proceeding.
-- [ ] Add button to force recalculate all efficiency stat for the selected car
+- [X] Add new "danger zone" to settings page with a red button "wipe all data" to completely delete user data (cars+log entries). Clicking on the button should ask for confirmation with a popup before proceeding.
+- [X] Add button to force recalculation of all efficiency stat for all cars
+- [ ] Add "record type" filter on "All activities" page to filter by fill-ups/services/general expenses.
