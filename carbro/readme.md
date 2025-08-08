@@ -163,7 +163,48 @@ That's ok, let's fix some issues:
 
 Always on "Settings" page, in the import/export module: change className for GlassButton from w-full to flex items-center gap-2
 
+---
+
+Staying on "settings" page, when I click on "import data" (both vehicles and Log Entries) nothing happens. Please note that even If I open "developer tools" on my browser to see what's happening under the hood, I see no request at all, it seems that clicking those buttons simply does nothing. Fix the problem so that when clicking on those buttons the user is prompted to select the import file from its device and proceed with the import.
+
+---
+
+Importing a file for "Log Entries" I get the following error:
+
+{ "status": "error", "details": "Failed to extract records after 5 attempts. Last error: Binder Error: Table "d" does not have a column named "car_license_number"\n\nCandidate bindings: : "car_license_number,log_date,entry_type,odometer,total_price,price_per_litre,total_litres,fillup_type,service_type,location,notes"", "output": null }
+
+please fix it.
+
+---
+
+now, while importing "log entries" data I get the following message:
+
+{ "status": "success", "details": "Used the following SQL query to map fields: SELECT \n COALESCE(NULLIF(SPLIT_PART(all_data, ',', 1), ''), 'Unknown') AS car_license_number,\n COALESCE(NULLIF(SPLIT_PART(all_data, ',', 2), ''), '1970-01-01T00:00:00Z') AS log_date,\n COALESCE(NULLIF(SPLIT_PART(all_data, ',', 3), ''), 'Unknown') AS entry_type,\n CAST(NULLIF(SPLIT_PART(all_data, ',', 4), '') AS DOUBLE) AS odometer,\n CAST(NULLIF(SPLIT_PART(all_data, ',', 5), '') AS DOUBLE) AS total_price,\n CAST(NULLIF(SPLIT_PART(all_data, ',', 6), '') AS DOUBLE) AS price_per_litre,\n CAST(NULLIF(SPLIT_PART(all_data, ',', 7), '') AS DOUBLE) AS total_litres,\n NULLIF(SPLIT_PART(all_data, ',', 8), '') AS fillup_type,\n NULLIF(SPLIT_PART(all_data, ',', 9), '') AS service_type,\n COALESCE(NULLIF(SPLIT_PART(all_data, ',', 10), ''), 'Unknown') AS location,\n NULLIF(SPLIT_PART(all_data, ',', 11), '') AS notes\nFROM \n (SELECT REPLACE(data."car_license_number,log_date,entry_type,odometer,total_price,price_per_litre,total_litres,fillup_type,service_type,location,notes", '"', '') AS all_data FROM data);", "output": [ { "data": [] }, { "data": [] } ] }
+
+This is a pretty misleading message: it's red color, but says "success", but no data has been imported anyway.
+
+Please fix it to correctly import data and change the color of the final message, if it's successful it should be green.
+
+---
+
+Now I get the following error:
+
+Import failed: Failed to extract records after 5 attempts. Last error: Binder Error: No function matches the given name and argument types 'string_split(STRUCT(unnest VARCHAR), STRING_LITERAL)'. You might need to add explicit type casts. Candidate functions: string_split(VARCHAR, VARCHAR) -> VARCHAR[]
+
+---
+
+Almost there, file has been uploaded and data has been correctly parsed, I can see all data from "developer tools" on my browser. Unfortunately, when saving, I got the following error from POST request to https://base44.app/api/apps/6893541e4030abae59debb07/entities/LogEntry/bulk:
+
+{ "error_type": "HTTPException", "message": "You don't have permission to create some of these entities.", "detail": "You don't have permission to create some of these entities.", "traceback": "" }
+
+---
+
+Import still failing with code 403 and same message I can see from "developer tools" of my browser:
+
+{ "error_type": "HTTPException", "message": "You don't have permission to create some of these entities.", "detail": "You don't have permission to create some of these entities.", "traceback": "" }
+
 ## TODO
 
-- [ ] Fix import feature, not even opening file selection dialog...
-- [ ] Add button red "wipe all data" to completely delete user data. Clicking on the button should ask for confirmation with a popup.
+- [X] Fix import feature, not even opening file selection dialog...
+- [ ] Add new "danger zone" to settings page with a red button "wipe all data" to completely delete user data (cars+log entries). Clicking on the button should ask for confirmation with a popup before proceeding.
+- [ ] Add button to force recalculate all efficiency stat for the selected car
