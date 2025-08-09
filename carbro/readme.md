@@ -4,6 +4,8 @@ Got a decent MVP after 32 (out of my monthly free 35) prompts, for a complete li
 
 ## List of prompts
 
+List of prompts divided by day, with personal notes:
+
 - [2025-08-06](prompts/2025-08-06.md)
 - [2025-08-07](prompts/2025-08-07.md)
 - [2025-08-08](prompts/2025-08-08.md)
