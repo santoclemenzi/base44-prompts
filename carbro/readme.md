@@ -9,6 +9,7 @@ List of prompts divided by day, with personal notes:
 - [2025-08-06](prompts/2025-08-06.md)
 - [2025-08-07](prompts/2025-08-07.md)
 - [2025-08-08](prompts/2025-08-08.md)
+- [2025-09-06](prompts/2025-09-06.md)
 
 ## TODO
 
@@ -21,3 +22,4 @@ List of prompts divided by day, with personal notes:
 - [ ] Reports/chart: line chart for fuel price over time, pie chart of total expenses grouped by record type. And more...
 - [ ] add "All activities" filter to chart page
 - [ ] Fix dark mode switching...
+- [ ] Add attribution for app icon: <a href="https://www.flaticon.com/free-icons/car-service" title="car service icons">Car service icons created by wanicon - Flaticon</a>
