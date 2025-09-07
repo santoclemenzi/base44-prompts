@@ -22,5 +22,6 @@ List of prompts divided by day, with personal notes:
 - [X] on EntryForm, for "Location" field, pre-populate data to help data entry: after first 2 characters start propose data from existent values within log entries table filtered by character while typing.
 - [X] Reports/chart: line chart for fuel price over time, pie chart of total expenses grouped by record type. And more...
 - [ ] add "All activities" filter to chart page
+- [X] Add "recurring expense" feature
 - [ ] Fix dark mode switching...
 - [ ] Add attribution for app icon: <a href="https://www.flaticon.com/free-icons/car-service" title="car service icons">Car service icons created by wanicon - Flaticon</a>
