@@ -11,6 +11,7 @@ List of prompts divided by day, with personal notes:
 - [2025-08-08](prompts/2025-08-08.md)
 - [2025-09-06](prompts/2025-09-06.md)
 - [2025-09-07](prompts/2025-09-07.md)
+- [2025-09-09](prompts/2025-09-09.md)
 
 ## TODO
 
@@ -25,3 +26,4 @@ List of prompts divided by day, with personal notes:
 - [X] Add "recurring expense" feature
 - [ ] Fix dark mode switching...
 - [ ] Add attribution for app icon: <a href="https://www.flaticon.com/free-icons/car-service" title="car service icons">Car service icons created by wanicon - Flaticon</a>
+- [ ] New feature: add files (pdf/photo) to log entries.
