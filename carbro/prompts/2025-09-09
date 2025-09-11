@@ -1,0 +1,8 @@
+> [!NOTE]
+> Let's start with the automatic fixing of the previous error... it correctly addressed the issue!
+
+---
+
+> Please note that whenever a user set a recurring expense with a start date in the past, the app should insert as many entries as needed to reach a due date in the future. Right now, with the current test data, the app just added one expense with the current date. Here's how it should work: if today is 09/09/2025 and I add a recurring expense every month starting from 15/01/2025, the app should add 8 entries with dates like 15/01/2025, 15/02/2025, 15/03/2025 and so on until it reaches the current date.
+
+> The feature now inserts all entries BUT they're saved with a date corresponding to the current date: they should be saved within the database with the correct due date. Example: If the start date specified is 19/01/2025, the entry should be saved with 19/01/2025, and so on...
